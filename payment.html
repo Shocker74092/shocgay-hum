@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ชำระเงิน</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>ชำระเงิน</h1>
+
+<div class="card">
+
+<p>สินค้า : <span id="productName"></span></p>
+
+<p>ราคา : <span id="productPrice"></span> บาท</p>
+
+<p>
+จำนวนสินค้า :
+<input type="number" id="qty" value="1" min="1" onchange="updateTotal()">
+</p>
+
+<p>
+จำนวนเงินที่ต้องชำระ :
+<span id="totalPrice"></span> บาท
+</p>
+
+</div>
+
+<br>
+
+<button onclick="confirmPay()">ยืนยันการชำระเงิน</button>
+
+<script src="script.js"></script>
+
+<script>
+loadPayment()
+</script>
+
+</body>
+</html>
